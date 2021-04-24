@@ -1,0 +1,9 @@
+.idea
+
+*.sqlite3
+
+venv
+
+ecommerce/__pycache__
+
+*.pyc
