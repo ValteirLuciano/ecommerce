@@ -1,0 +1,33 @@
+{% block content %}
+    <div class="row">
+        <h1>Produto</h1>
+        <table class="table table-striped" border="2">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Imagem</th>
+                    <th scope="col">Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                    <tr>
+                        <td>{{ product.id }}</td>
+                        <td>{{ product.title }}</td>
+                        <td>{{ product.description }}</td>
+                        <td>R$ {{ product.price }}</td>
+                        <td> <img src='{{ object.image.url }}' class='img-fluid' /> </td>
+                        <td>
+                            <a class="btn btn-warning" href="">Editar</a>
+                            <a class="btn btn-danger" href="">Deletar</a>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+

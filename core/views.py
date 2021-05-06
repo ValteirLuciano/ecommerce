@@ -5,7 +5,6 @@ from .forms import ContactForm, LoginForm, RegisterForm
 from django.contrib.auth import authenticate, login, get_user_model
 
 
-
 def home_page(request):
     context = {
                     "title": "Home Page",

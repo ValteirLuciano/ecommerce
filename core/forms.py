@@ -1,5 +1,7 @@
 from django import forms
 from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
+
 
 class ContactForm(forms.Form):
     nome_completo = forms.CharField(
