@@ -7,8 +7,8 @@ from django.contrib.auth import authenticate, login, get_user_model
 
 def home_page(request):
     context = {
-                    "title": "Home Page",
-                    "content": "Bem vindo a Home Page",
+                    "title": "Página Home",
+                    "content": "Bem vindo a página home",
               }
     if request.user.is_authenticated:
         context["premium_content"] = "Você é um usuário Premium"
@@ -16,21 +16,21 @@ def home_page(request):
 
 def about_page(request):
     context = {
-                    "title": "About Page",
-                    "content": "Bem vindo a About Page"
+                    "title": "Página Sobre",
+                    "content": "Bem vindo a página sobre"
               }
-    return render(request, "about/view.html", context)
+    return render(request, "about/about.html", context)
 
 def contact_page(request):
     contact_form = ContactForm(request.POST or None)
     context = {
-                    "title": "Contact Page",
-                    "content": "Bem vindo a Contact Page",
+                    "title": "Página de Contato",
+                    "content": "Bem vindo a página de contato",
                     "form": contact_form
               }
     if contact_form.is_valid():
         print(contact_form.cleaned_data)
-    return render(request, "contact/view.html", context)
+    return render(request, "contact/contact.html", context)
 
 def login_page(request):
     form = LoginForm(request.POST or None)
