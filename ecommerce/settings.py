@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'products',
     'search',
     'tags',
+    'carts',
+    'orders',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -53,6 +56,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+LOGOUT_REDIRECT_URL = '/login/'
 
 ROOT_URLCONF = 'ecommerce.urls'
 
@@ -127,5 +132,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT =os.path.join(BASE_DIR, 'media')
-
-#LOGOUT_REDIRECT_URL = 'home_page'
